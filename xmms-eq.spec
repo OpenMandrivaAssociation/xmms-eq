@@ -1,6 +1,6 @@
 %define name    xmms-eq
 %define version 0.6
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: Equalizer plugin for XMMS
 Name: %{name}
@@ -24,6 +24,7 @@ almost everything that you play through XMMS, not just the MP3s.
 
 %setup -q -n eq-xmms-%{version}/
 %patch -p1 -b .auto
+libtoolize --force
 aclocal
 autoconf
 automake
