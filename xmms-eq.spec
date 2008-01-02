@@ -14,6 +14,7 @@ License: GPL
 Requires: xmms >= 1.0.1
 BuildRequires: xmms-devel 
 BuildRequires: xmms
+BuildRoot: %{_tmppath}/%{name}-buildroot
 
 %description
 EQU is a realtime graphical equalizer effect plugin that will equalize
