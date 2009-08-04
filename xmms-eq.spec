@@ -1,6 +1,6 @@
 %define name    xmms-eq
 %define version 0.6
-%define release %mkrel 8
+%define release %mkrel 9
 
 Summary: Equalizer plugin for XMMS
 Name: %{name}
@@ -10,7 +10,7 @@ Group: Sound
 URL: http://equ.sourceforge.net/ 
 Source: http://prdownloads.sourceforge.net/equ/eq-xmms-%{version}.tar.bz2 
 Patch: eq-xmms-0.6-no-autodetect.patch
-License: GPL
+License: GPLv2+
 Requires: xmms >= 1.0.1
 BuildRequires: xmms-devel 
 BuildRequires: xmms
