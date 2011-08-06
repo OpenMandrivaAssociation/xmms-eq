@@ -24,6 +24,7 @@ almost everything that you play through XMMS, not just the MP3s.
 
 %setup -q -n eq-xmms-%{version}/
 %patch -p1 -b .auto
+
 libtoolize --force
 aclocal
 autoconf
