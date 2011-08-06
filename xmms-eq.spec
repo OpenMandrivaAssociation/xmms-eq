@@ -1,6 +1,6 @@
 %define name    xmms-eq
 %define version 0.6
-%define release %mkrel 9
+%define release %mkrel 10
 
 Summary: Equalizer plugin for XMMS
 Name: %{name}
