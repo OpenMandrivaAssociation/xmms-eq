@@ -14,6 +14,7 @@ License: GPLv2+
 Requires: xmms >= 1.0.1
 BuildRequires: xmms-devel 
 BuildRequires: xmms
+BuildRequires: automake
 BuildRoot: %{_tmppath}/%{name}-buildroot
 
 %description
