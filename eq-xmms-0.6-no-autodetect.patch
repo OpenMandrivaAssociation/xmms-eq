@@ -1,0 +1,39 @@
+--- eq-xmms-0.6/src/Makefile.am.auto	2004-05-16 03:20:47.000000000 +0200
++++ eq-xmms-0.6/src/Makefile.am	2005-06-10 12:22:07.000000000 +0200
+@@ -22,7 +22,7 @@
+             eq_slider.h eq_graph.c eq_graph.h equalizer.c equalizer.h \
+             gui.c gui.h eqpbutton.c eqpbutton.h eqtbutton.c \
+             eqtbutton.h configuration.c configuration.h \
+-            debug.h cpudetect.c cpudetect.h x86cputable.h \
++            debug.h  x86cputable.h \
+             eqskin.c eqskin.h bmp.c bmp.h eqskinwin.c eqskinwin.h \
+             eqhslider.c eqhslider.h
+ 
+@@ -30,11 +30,15 @@
+ ASM_FILES = util.s
+ endif
+ 
++if AUTODETECT
++AUTODETECT_FILES = cpudetect.c cpudetect.h
++endif
++
+ if BENCHMARK
+ BM_FILES = benchmark.h benchmark.c
+ endif
+ 
+-libeq_la_SOURCES = $(SRC_FILES) $(BM_FILES) $(ASM_FILES)
++libeq_la_SOURCES = $(SRC_FILES) $(BM_FILES) $(ASM_FILES) $(AUTODETECT_FILES)
+ 
+ INCLUDES  = -Ixmms-headers @XF_CFLAGS@
+ AM_CFLAGS = -Wall
+--- eq-xmms-0.6/configure.in~	2004-05-16 03:55:08.000000000 +0200
++++ eq-xmms-0.6/configure.in	2005-06-10 12:26:14.000000000 +0200
+@@ -232,6 +232,8 @@
+ AM_CONDITIONAL(ARCH_PPC, test "x$arch_type" = "xpowerpc")
+ AM_CONDITIONAL(ARCH_HPUX, test "x$arch_type" = "xhpux")
+ AM_CONDITIONAL(HAVE_SOLARIS, test "x$have_solaris" = "xyes")
++AM_CONDITIONAL(AUTODETECT, test "x$autodetect" = "xyes")
++
+ 
+ dnl Get CFLAGS / LIBS
+ XMMS_CFLAGS="`$XMMS_CONFIG --cflags` -DLOCALEDIR=\\\"$localedir\\\""
