@@ -7,7 +7,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Group: Sound
-URL: http://equ.sourceforge.net/ 
+URL: https://equ.sourceforge.net/ 
 Source: http://prdownloads.sourceforge.net/equ/eq-xmms-%{version}.tar.bz2 
 Patch: eq-xmms-0.6-no-autodetect.patch
 License: GPLv2+
