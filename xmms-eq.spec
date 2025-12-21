@@ -12,6 +12,9 @@ Source: http://prdownloads.sourceforge.net/equ/eq-xmms-%{version}.tar.bz2
 Patch: eq-xmms-0.6-no-autodetect.patch
 License: GPLv2+
 Requires: xmms >= 1.0.1
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: xmms-devel 
 BuildRequires: xmms
 BuildRequires: automake
